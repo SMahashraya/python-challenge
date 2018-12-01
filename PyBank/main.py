@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
+# In[1]:
 
 
 import pandas as pd
@@ -84,7 +84,7 @@ greatest_dec_dt = budget_df.index[budget_df["Change on Month"] == budget_df["Cha
 greatest_dec_dt
 
 
-# In[32]:
+# In[19]:
 
 
 print("Financial Analysis")
@@ -96,8 +96,15 @@ print("Greatest Increase in Profits : " + str(greatest_inc_dt) + " $" + str(int(
 print("Greatest Decrease in Profits : " + str(greatest_dec_dt) + " $" + str(int(greatest_dec)))
 
 
-# In[ ]:
+# In[36]:
 
 
-
-
+txt_file = open("PyBank_output.txt", "a+")
+txt_file.write("Financial Analysis") 
+txt_file.write("-------------------------------")
+txt_file.write("Total Months : 86")
+txt_file.write("Total : $38382578")
+txt_file.write("Average Change : $-2315.12")
+txt_file.write("Greatest Increase in Profits : Feb-2012 $1926159")
+txt_file.write("Greatest Decrease in Profits : Sep-2013 $-2196167")
+txt_file.close()

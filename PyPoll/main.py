@@ -124,3 +124,19 @@ print(candidates[3] + " : " + str("{0:.3f}%".format((otooley_wins/total_votes)*1
 print("--------------------------------")
 print("Winner : " + results_df["Candidate"].loc[results_df["Percentage of Votes Won"] == results_df["Percentage of Votes Won"].max()].values[0])
 
+
+# In[1]:
+
+
+txt_file = open("PyPoll_output.txt", "a+")
+txt_file.write("Election Results")
+txt_file.write("--------------------------------")
+txt_file.write("Election Results")
+txt_file.write("--------------------------------")
+txt_file.write("Khan : 63.000% (2218231)")
+txt_file.write("Correy : 20.000% (704200)") 
+txt_file.write("Li : 14.000% (492940)") 
+txt_file.write("O'Tooley : 3.000% (105630)") 
+txt_file.write("--------------------------------")
+txt_file.write("Winner : Khan")
+txt_file.close()
